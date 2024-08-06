@@ -35,7 +35,7 @@ class _AddCarScreenState extends State<AddCarScreen> {
 
       // Crear un nuevo objeto Car
       final car = CarModel(
-        id: '', // Puedes generar un ID o dejarlo vacío si es autogenerado
+        id: 0, // Puedes generar un ID o dejarlo vacío si es autogenerado
         brand: brand,
         model: model,
         speed: speed,
@@ -44,7 +44,6 @@ class _AddCarScreenState extends State<AddCarScreen> {
 
       // Usar el cubit para agregar el nuevo coche
       final busCubit = BlocProvider.of<CarCubit>(context).createCar(car);
-
       // Volver a la pantalla anterior
       Navigator.pop(context);
     }
