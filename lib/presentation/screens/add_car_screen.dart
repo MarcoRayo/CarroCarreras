@@ -43,7 +43,7 @@ class _AddCarScreenState extends State<AddCarScreen> {
       );
 
       // Usar el cubit para agregar el nuevo coche
-      BlocProvider.of<CarCubit>(context).createCar(car);
+      final busCubit = BlocProvider.of<CarCubit>(context).createCar(car);
 
       // Volver a la pantalla anterior
       Navigator.pop(context);
